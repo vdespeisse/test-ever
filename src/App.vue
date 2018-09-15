@@ -1,3 +1,5 @@
+<style src="./assets/css/raw.css" />
+<style src="./assets/css/layout.css" />
 <template>
   <main id="app">
     <router-view class="page" :key="$route.path" ref="router" />
