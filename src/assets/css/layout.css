@@ -1,0 +1,11 @@
+@import '../fonts/Roboto.css';
+
+:root {
+  --text: #474747;
+}
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+}
