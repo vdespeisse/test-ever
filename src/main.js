@@ -1,5 +1,4 @@
 import './globals'
-import './utils/sugar'
 import App from './App.vue'
 import router from './router'
 import VueFire from 'vuefire'
@@ -14,6 +13,19 @@ Vue.use(VueFire)
 window.vm = new Vue({
   router,
   ...App,
-}).$mount('#app')
+})
+
+function ready(loadApp) {
+   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+     loadApp();
+   } else {
+     document.addEventListener('DOMContentLoaded', loadApp);
+   }
+ }
+
+ready(function loadApp() {
+ window.vm.$mount('#app')
+});
+
 
 export default window.vm

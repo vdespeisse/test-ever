@@ -2,6 +2,8 @@
 <style src="./assets/css/layout.css" />
 <template>
   <main id="app">
+    <div>Always display this text</div>
+    <div>Router path: {{ $route.path }} </div>
     <router-view class="page" :key="$route.path" ref="router" />
   </main>
 </template>
